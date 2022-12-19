@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "sommeA",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "n",
+						"type": "uint256"
+					}
+				],
+				"name": "sommeN",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"forloop/contracts/Multiply.sol": "Multiply"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"forloop/contracts/Multiply.sol": {
+			"keccak256": "0xc2ca53e6eb6714b6966f35d9c79ff99fdd1f6295e018e5fffb954f8edb6a4e39",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://64fc1f6c4b8ce0c1c7c67ba23dfcf8851df56f266cc83ff9b056c2ab69ad58a2",
+				"dweb:/ipfs/Qmc8oE93hqxpeZGFGF6fB2bkLUcA3xYqGgBz9eLpmKkFXA"
+			]
+		}
+	},
+	"version": 1
+}
