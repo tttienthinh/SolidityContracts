@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getFavoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "setFavoriteNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Documents/Programmation/Arbitrage/SolidityContracts/favoritenumber/contracts/FavoriteNumber.sol": "FavoriteNumber"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Documents/Programmation/Arbitrage/SolidityContracts/favoritenumber/contracts/FavoriteNumber.sol": {
+			"keccak256": "0x07bbab473290f164b01dcc832199d7cfd9d3c79808d0ed47e756e2d2c05e66ea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ff08637ee174a59c8db0e7cbd384c9e2d53499d071e22108091117917ce0ed4",
+				"dweb:/ipfs/Qmb1AV8JHeEzALqGFuTNWWnD1U1ZDf17JkUB2aNqFho6ze"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,10 +1,10 @@
 from web3 import Web3
 import json, web3
 
-server = "HTTP://127.0.0.1:7545"
+server = "https://eth-goerli.public.blastapi.io"
 id = 5777
-private_key = "443fef73e0ae67ee14f49ba7e5430b01646af5c2b5966f49cba8c42f2553275f"
-public_add = "0x2DD2D553f41a9Ab95347C2A21d080559443C8FEa"
+private_key = "df49b58fbc863c5e60fe4e64829a853c46a8a12c3310404bc2a03bfefb89f68a"
+public_add = "0xb4311ad11530F735ecE2d652Cbd56D1FB8D6Efeb"
 
 public_add2 = "0x9C4486F021E2551854f2F720134F91b8d8C53e2c"
 
@@ -16,23 +16,23 @@ w3 = Web3(Web3.HTTPProvider(server))
 w3.isConnected()
 w3.eth.get_block('latest')
 
-address = "0x19817df3224bE622F19D08445ca1Ffc317AeC174"
+address = "0x86C8C730bff1AdA2544D6135cadac525CfA8808e"
 
 contract = w3.eth.contract(address=address, **get_abi("favoritenumber/build/contracts/FavoriteNumber.json"))
 contract.functions.getFavoriteNumber().call()
 # Ceci ne marche pas  -- contract.functions.setFavoriteNumber(42).call()
-contract.functions.getFavoriteNumber().call()
-
 
 txn = contract.functions.setFavoriteNumber(
     20,
 ).build_transaction({
     'nonce': w3.eth.get_transaction_count(public_add),
     'gas': 2000000,
-    'gasPrice': w3.toWei('50', 'gwei')
+    'gasPrice': w3.toWei('5', 'gwei')
 })
 signed_txn = w3.eth.account.sign_transaction(txn, private_key=private_key)
 w3.eth.send_raw_transaction(signed_txn.rawTransaction) 
+# Test
+contract.functions.getFavoriteNumber().call()
 
 # Transfert d'argent
 
