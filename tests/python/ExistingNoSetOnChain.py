@@ -14,23 +14,23 @@ def get_abi(name):
 
 w3 = Web3(Web3.HTTPProvider(server))
 w3.isConnected()
-w3.eth.get_block('latest')
 
-address = "0x14c89b4F462C11961Bb48aD6B2008f64617CF62a"
+# Contrat intermédiaire
+address = "0x97BdDaff1a971580f99C1DB850dE5EcF4982251a"
 
-contract = w3.eth.contract(address=address, **get_abi("tests/build/contracts/FavoriteNumber.json"))
-contract.functions.getFavoriteNumber().call()
-# Ceci ne marche pas  -- contract.functions.setFavoriteNumber(42).call()
+contract = w3.eth.contract(address=address, **get_abi("tests/build/contracts/ExistingNoSet.json"))
 
-txn = contract.functions.setFavoriteNumber(
-    3,
+contract.all_functions()
+
+contract.functions.getA("0x14c89b4F462C11961Bb48aD6B2008f64617CF62a").call()
+
+
+txn = contract.functions.setA(
+    "0x14c89b4F462C11961Bb48aD6B2008f64617CF62a", 15
 ).build_transaction({
     'nonce': w3.eth.get_transaction_count(public_add),
-    'gas': 2000000,
+    'gas': 200000,
     'gasPrice': w3.toWei('20', 'gwei')
 })
 signed_txn = w3.eth.account.sign_transaction(txn, private_key=private_key)
 w3.eth.send_raw_transaction(signed_txn.rawTransaction) 
-# Test
-contract.functions.getFavoriteNumber().call()
-

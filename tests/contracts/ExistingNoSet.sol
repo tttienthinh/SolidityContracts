@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+// compiled with 0.8.17
 pragma solidity >=0.4.22 <0.9.0;
 
 contract FavoriteNumber {
