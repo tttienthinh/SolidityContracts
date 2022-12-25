@@ -2,6 +2,12 @@ from web3 import Web3
 import json, web3
 
 server = "https://eth-goerli.public.blastapi.io"
+"""
+0 : 
+1 : 
+
+"""
+
 id = 5777
 private_key = "df49b58fbc863c5e60fe4e64829a853c46a8a12c3310404bc2a03bfefb89f68a"
 public_add = "0xb4311ad11530F735ecE2d652Cbd56D1FB8D6Efeb"
